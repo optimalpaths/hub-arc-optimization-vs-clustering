@@ -1,3 +1,8 @@
+🔗 **Related full-scale study (IEEE):** https://ieeexplore.ieee.org/abstract/document/11029611  
+**Scale highlight:** 250,000+ trips / 400,000+ movements, **83.7% trip coverage**, **14 opened connections**, **< 8 min average solve time** via **Benders decomposition**.
+
+---
+
 ## Hub-Arc Ride-Sharing Mini-Project  
 ## MILP (Gurobi) vs. Two Data-Driven Heuristics (K-medoids + LCS)
 
@@ -6,7 +11,7 @@ This repo is a compact, end-to-end mini-project that answers a practical questio
 If you can "open" only Q shared hub-to-hub connections, which method chooses the best connections and serves the most riders—an optimization model or data-driven clustering heuristics?
 
 It includes:
-- a Gurobi MILP (default solve; scalable versions can use a Benders-decomposition algorithm),
+- a Gurobi MILP (default solve; full-scale version uses **Benders decomposition** for large instances),
 - two "ML-style" baselines:
   - K-medoids on OD similarity (end-point similarity),
   - LCS clustering on route-sequence similarity (overlap),
@@ -113,7 +118,7 @@ This project is designed to generate insights—not just a scoreboard:
 
 ## Repo structure
 
-```
+```text
 .
 ├─ notebooks/
 │  └─ comparison_analysis_clean_gurobi.ipynb
@@ -134,9 +139,9 @@ This project is designed to generate insights—not just a scoreboard:
 ## Setup
 
 ### 1) Install dependencies
-bash
+```bash
 pip install -r requirements.txt
-
+```
 
 ### 2) Gurobi
 To run the MILP you need:
@@ -151,7 +156,7 @@ If MILP is unavailable, you can still run the two heuristics.
 
 Open the notebook:
 
-notebooks/comparison_analysis_clean_gurobi.ipynb
+`notebooks/comparison_analysis_clean_gurobi.ipynb`
 
 Edit the top settings:
 
@@ -202,4 +207,3 @@ If you want to extend this later:
 - Export the chosen arcs + utilization into a tidy artifact for plotting.
 
 ---
-
