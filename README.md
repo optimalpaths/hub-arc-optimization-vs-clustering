@@ -136,22 +136,6 @@ This project is designed to generate insights—not just a scoreboard:
 
 ---
 
-## Setup
-
-### 1) Install dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 2) Gurobi
-To run the MILP you need:
-- gurobipy installed
-- a working Gurobi license
-
-If MILP is unavailable, you can still run the two heuristics.
-
----
-
 ## Run the experiment
 
 Open the notebook:
